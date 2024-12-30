@@ -34,7 +34,7 @@ A Node.js-based web application that allows users to write, read, and manage mov
    ```
 5. Open your browser and navigate to:
    ```
-   http://localhost:3000
+   http://localhost:5000
    ```
 
 ## Project Structure
