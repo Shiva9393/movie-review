@@ -13,6 +13,12 @@ A Node.js-based web application that allows users to write, read, and manage mov
 - **Backend**: Node.js, Express.js
 - **Database**: SQLite
 - **Other Tools**: Git, npm
+![image](https://github.com/user-attachments/assets/3361ddc2-9aab-4533-80aa-0baf34251d2a)
+
+![image](https://github.com/user-attachments/assets/55433db6-c13c-4af4-a3b0-c43f9e3516fb)
+
+![image](https://github.com/user-attachments/assets/89884f8b-fafc-41b3-8854-f05365b6cd33)
+
 
 ## Installation
 
