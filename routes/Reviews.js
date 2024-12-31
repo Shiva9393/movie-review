@@ -1,12 +1,8 @@
 const express = require('express');
 const { insertReview, getAllReviews } = require('../db.js');
 console.log('DB module imported successfully:', { insertReview, getAllReviews });
- // Move up one directory to access db.js
- // Relative path to db.js
-
 const router = express.Router();
 
-// Route to add a new review
 router.post('/', async (req, res) => {
     const { movieTitle, reviewerName, reviewText, rating } = req.body;
 console.log(req.body);
@@ -19,8 +15,7 @@ console.log(req.body);
     }
 
     try {
-        // Insert the review into the database
-        // let reviewerName= "Ano"
+     
         const reviewId = await insertReview(movieTitle, reviewerName, reviewText, numericRating);
         res.status(201).json({
             message: 'Review submitted successfully.',
@@ -31,15 +26,12 @@ console.log(req.body);
         res.status(500).json({ error: 'Error inserting review. Please try again later.' });
     }
 });
-
-// Route to get reviews for a specific movie
 router.get('/', async (req, res) => {
     const { movieTitle } = req.query;
 
     try {
-        // Retrieve reviews for the specified movie
+   
         const reviews = await getAllReviews(movieTitle);
-
         res.status(200).json(reviews);
     } catch (err) {
         console.error('Error retrieving reviews:', err.message);
@@ -47,5 +39,4 @@ router.get('/', async (req, res) => {
     }
 });
 
-// Export the router
 module.exports = router;
