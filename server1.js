@@ -13,9 +13,9 @@ app.use(cors());
 app.use(express.json());
 app.use(cors());
 app.use(express.json());
-app.use(express.static(path.join(__dirname, 'public'))); // Serve static files from 'public' folder
+app.use(express.static(path.join(__dirname, 'public'))); 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'main.html')); // Send main.html file
+    res.sendFile(path.join(__dirname, 'public', 'main.html')); 
 });
 app.post('/api/users', async (req, res) => {
     const { username, email } = req.body;
