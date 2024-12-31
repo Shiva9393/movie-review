@@ -1,10 +1,10 @@
 const sqlite3 = require('sqlite3').verbose();
 const path = require('path');
 
-// Define the path to the database file
+
 const dbPath = path.resolve(__dirname, 'database.db');
 
-// Create a new SQLite database instance
+
 const db = new sqlite3.Database(dbPath, (err) => {
     if (err) {
         console.error('Error connecting to the database:', err.message);
@@ -15,7 +15,7 @@ const db = new sqlite3.Database(dbPath, (err) => {
     }
 });
 
-// Function to initialize the database by creating tables
+
 function initializeDatabase() {
     createUsersTable();
     createReviewsTable();
@@ -33,7 +33,7 @@ function createUsersTable() {
     db.run(sql, logTableCreation('users'));
 }
 
-// Function to create the 'reviews' table
+
 function createReviewsTable() {
     const sql = `
         CREATE TABLE IF NOT EXISTS reviews (
@@ -48,7 +48,7 @@ function createReviewsTable() {
     db.run(sql, logTableCreation('reviews'));
 }
 
-// Helper function to log table creation success/failure
+
 function logTableCreation(tableName) {
     return (err) => {
         if (err) {
@@ -59,7 +59,7 @@ function logTableCreation(tableName) {
     };
 }
 
-// Function to insert a new user into the 'users' table
+
 function insertUser(username, email) {
     return new Promise((resolve, reject) => {
         const sql = `INSERT INTO users (username, email) VALUES (?, ?)`;
@@ -70,7 +70,6 @@ function insertUser(username, email) {
     });
 }
 
-// Function to insert a new review into the 'reviews' table
 function insertReview(movieTitle, reviewerName, reviewText, rating) {
     return new Promise((resolve, reject) => {
         const sql = `
@@ -84,7 +83,6 @@ function insertReview(movieTitle, reviewerName, reviewText, rating) {
     });
 }
 
-// Function to retrieve all reviews (or reviews for a specific movie)
 function getAllReviews(movieTitle = null) {
     return new Promise((resolve, reject) => {
         const sql = movieTitle
@@ -97,7 +95,7 @@ function getAllReviews(movieTitle = null) {
     });
 }
 
-// Export the necessary functions
+
 module.exports = {
     insertUser,
     insertReview,
