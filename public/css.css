@@ -1,4 +1,4 @@
-/* General Styles */
+
 body {
     font-family: 'Arial', sans-serif;
     background-color: #121212;
@@ -8,9 +8,9 @@ body {
 }
 
 .title {
-    background-color: #000000; /* Black background */
-    color: #D3D3D3; /* Light gray text */
-    font-family: 'Poppins', sans-serif; /* Aesthetic font */
+    background-color: #000000; 
+    color: #D3D3D3; 
+    font-family: 'Poppins', sans-serif; 
     padding: 10px;
     border-radius: 5px;
     text-align: center;
@@ -26,7 +26,6 @@ body {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
-/* Header Styles */
 h1 {
     text-align: center;
     font-size: 2.5em;
@@ -41,7 +40,6 @@ h2 {
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
 
-/* Movie Styles */
 .movies {
     display: flex;
     justify-content: space-around;
@@ -76,7 +74,6 @@ h2 {
     transform: scale(1.1);
 }
 
-/* Modal Styles */
 .modal {
     display: none; 
     position: fixed; 
@@ -119,7 +116,6 @@ h2 {
     cursor: pointer;
 }
 
-/* Review Textarea Styles */
 textarea {
     width: 100%;
     padding: 10px;
@@ -137,7 +133,6 @@ textarea:focus {
     border: 1px solid #ff0000;
 }
 
-/* Button Styles */
 button {
     padding: 10px;
     background-color: #ff0000;
@@ -148,10 +143,6 @@ button {
     transition: background-color 0.3s, transform 0.3s;
 }
 
-
-
-
-/* Review Form Container */
 #reviewForm {
     background-color: #1e1e1e;
     border: 1px solid #333;
@@ -162,7 +153,7 @@ button {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Input Fields */
+
 #reviewForm input[type="text"],
 #reviewForm textarea,
 #reviewForm input[type="number"] {
@@ -177,7 +168,6 @@ button {
     transition: all 0.3s ease;
 }
 
-/* Input Fields Hover and Focus */
 #reviewForm input[type="text"]:focus,
 #reviewForm textarea:focus,
 #reviewForm input[type="number"]:focus {
@@ -185,8 +175,6 @@ button {
     border-color: #5e81ac;
     box-shadow: 0 0 8px #5e81ac;
 }
-
-/* Submit Button */
 #submitReview {
     width: 100%;
     background-color: #5e81ac;
@@ -204,14 +192,12 @@ button {
     box-shadow: 0 4px 8px rgba(94, 129, 172, 0.4);
 }
 
-/* Review Message */
 #reviewMessage {
     margin-top: 10px;
     font-size: 14px;
     text-align: center;
 }
 
-/* Responsive Design */
 @media (max-width: 480px) {
     #reviewForm {
         padding: 15px;
