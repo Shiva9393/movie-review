@@ -2,25 +2,25 @@ let currentMovieTitle = '';
 
 function openReviewModal(movieTitle) {
     currentMovieTitle = movieTitle; // Set the current movie title
-    document.getElementById("movieTitle").textContent = movieTitle; // Display the movie title in the modal
-    document.getElementById("reviewModal").style.display = "block"; // Show the modal
-    document.getElementById("actionButtons").style.display = "block"; // Show the action buttons
-    document.getElementById("reviewForm").style.display = "none"; // Hide the review form initially
-    document.getElementById("reviewsSection").style.display = "none"; // Hide the reviews section initially
-    document.getElementById("usernameSection").style.display = "none"; // Hide the username section initially
+    document.getElementById("movieTitle").textContent = movieTitle; 
+    document.getElementById("reviewModal").style.display = "block"; 
+    document.getElementById("actionButtons").style.display = "block"; 
+    document.getElementById("reviewForm").style.display = "none"; 
+    document.getElementById("reviewsSection").style.display = "none"; 
+    document.getElementById("usernameSection").style.display = "none"; 
     
     fetchReviews();
 }
 
 function closeReviewModal() {
-    document.getElementById("reviewModal").style.display = "none"; // Hide the modal
+    document.getElementById("reviewModal").style.display = "none"; 
 }
 
 function showReviewForm() {
-    document.getElementById("reviewForm").style.display = "block"; // Show the review form
-    document.getElementById("usernameSection").style.display = "none"; // Hide the username input section
-    document.getElementById("reviewsSection").style.display = "none"; // Hide the reviews section
-    document.getElementById("actionButtons").style.display = "none"; // Hide the action buttons
+    document.getElementById("reviewForm").style.display = "block"; 
+    document.getElementById("usernameSection").style.display = "none"; 
+    document.getElementById("reviewsSection").style.display = "none";
+    document.getElementById("actionButtons").style.display = "none"; 
 }
 
 function submitUsername() {
