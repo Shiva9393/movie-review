@@ -9,8 +9,6 @@
 <body>
     <div class="container">
         <h1 class="title">Movie Review Platform</h1>
-
-        <!-- Movie List -->
         <div class="movies">
             <div class="movie" id="inception" onclick="openReviewModal('Inception')">
                 <img src="https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_FMjpg_UX1000_.jpg" alt="Inception Poster">
@@ -46,25 +44,21 @@
             </div>
         </div>
 
-        <!-- Modal for Writing Review -->
         <div id="reviewModal" class="modal">
             <div class="modal-content">
                 <span class="close" onclick="closeReviewModal()">&times;</span>
                 <h2>Write a Review for <span id="movieTitle"></span></h2>
 
-                <!-- Buttons to Choose Action -->
                 <div id="actionButtons">
                     <button id="writeReviewButton" onclick="showReviewForm()">Write a Review</button>
                     <button id="seeReviewsButton" onclick="seeReviews()">See Reviews</button>
                 </div>
-
-                <!-- Username Input Section -->
+                
                 <div id="usernameSection" style="display:none;">
                     <input type="text" id="username" placeholder="Enter your username" required>
                     <button id="submitUsername" onclick="submitUsername()">Submit Username</button>
                 </div>
 
-                <!-- Review Form -->
                 <div id="reviewForm" style="display:none;">
                     <input type="text" id="reviewUsername" placeholder="Enter your username" required>
                     <textarea id="reviewText" rows="4" placeholder="Write your review here..." required></textarea>
@@ -73,7 +67,6 @@
                     <div id="reviewMessage"></div>
                 </div>
 
-                <!-- Reviews Section -->
                 <div id="reviewsSection" style="display:none;">
                     <ul id="reviewsList"></ul>
                     <button onclick="showReviewForm()">Write a Review</button>
